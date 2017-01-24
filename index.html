@@ -1,0 +1,103 @@
+<hmtl>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
+
+<style>
+    table th, table td {
+        width: 200px;
+        height:70px;
+        padding: 5px;
+    }
+    table span {
+        display:block;
+        background-color: #ccc;
+        border: 1px solid black;
+        color: fff;
+        height: 30px;
+        width: 100%;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".various").fancybox({
+            maxWidth    : 800,
+            maxHeight   : 600,
+            fitToView   : false,
+            width       : '70%',
+            height      : '70%',
+            autoSize    : false,
+            closeClick  : false,
+            openEffect  : 'none',
+            closeEffect : 'none'
+        });
+        $('.event').on("dragstart", function (event) {
+            var dt = event.originalEvent.dataTransfer;
+            dt.setData('Text', $(this).attr('id'));
+        });
+        $('table td').on("dragenter dragover drop", function (event) {
+            event.preventDefault();
+            if (event.type === 'drop') {
+                var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
+                de = $('#' + data).detach();
+                if (event.originalEvent.target.tagName === "SPAN") {
+                    de.insertBefore($(event.originalEvent.target));
+                }
+                else {
+                    de.appendTo($(this));
+                }
+                // click on link to show fancybox for the player
+                $('a[href*="#popup'+data+'"]').click();
+            };
+        });
+    })
+</script>
+</head>
+<body>
+    <table id="#our_table" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td><span class="event" id="box1" draggable="true">Item 1</span>
+            </td>
+            <td><span class="event" id="box2" draggable="true">Item 2</span>
+                <span class="event" id="box3" draggable="true">Item 3</span>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="popupbox1" style="width: 500px; display: none;">
+        <h2>
+            Lorem ipsum dolor sit amet
+        </h2>
+        Donkey Dick 1!!!
+    </div>
+    <div id="popupbox2" style="width: 500px; display: none;">
+        <h2>
+            Lorem ipsum dolor sit amet
+        </h2>
+        Donkey Dick 2!!!
+    </div>
+    <div id="popupbox3" style="width: 500px; display: none;">
+        <h2>
+            Lorem ipsum dolor sit amet
+        </h2>
+        Donkey Dick 3!!!
+    </div>
+    <div style="display: none;">
+        <a class="various" href="#popupbox1">click me</a>
+        <a class="various" href="#popupbox2">click me</a>
+        <a class="various" href="#popupbox3">click me</a>
+    </div>
+</body>
