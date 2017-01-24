@@ -22,6 +22,11 @@
     }
 </style>
 <script>
+
+    //delcare sweeet sweet global veraible for the playerdata so that I can manipulate it whenever i want
+    // note: this is super sweet and in no way a bad programming practice
+    var playerdata;
+
     $(document).ready(function () {
         $(".various").fancybox({
             maxWidth    : 800,
@@ -51,53 +56,65 @@
                 }
                 // click on link to show fancybox for the player
                 $('a[href*="#popup'+data+'"]').click();
+
+                // update playerdata
+                var j;
+                for (j=0;j<playerdata.length;j++){
+                    if (playerdata[j].id === data){
+                        playerdata[j].column= $(this).attr('id');
+                    }
+                }
+                // save updated data to local storage
+                localStorage.setItem('playerData', JSON.stringify(playerdata));
             };
         });
     })
 </script>
 </head>
 <body>
-    <table id="#our_table" border="1">
+    <table id="#draftTable" border="1">
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
+            <th>Picks</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Team 3</th>
+            <th>Team 4</th>
         </tr>
         <tr>
-            <td><span class="event" id="box1" draggable="true">Item 1</span>
-            </td>
-            <td><span class="event" id="box2" draggable="true">Item 2</span>
-                <span class="event" id="box3" draggable="true">Item 3</span>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="col1"></td>
+            <td id="col2"></td>
+            <td id="col3"></td>
+            <td id="col4"></td>
+            <td id="col5"></td>
         </tr>
     </table>
-    <div id="popupbox1" style="width: 500px; display: none;">
-        <h2>
-            Lorem ipsum dolor sit amet
-        </h2>
-        Donkey Dick 1!!!
+    <span id="invisiboxes">
+    </span>
+
+    <div id="invisilinks" style="display: none;">
     </div>
-    <div id="popupbox2" style="width: 500px; display: none;">
-        <h2>
-            Lorem ipsum dolor sit amet
-        </h2>
-        Donkey Dick 2!!!
-    </div>
-    <div id="popupbox3" style="width: 500px; display: none;">
-        <h2>
-            Lorem ipsum dolor sit amet
-        </h2>
-        Donkey Dick 3!!!
-    </div>
-    <div style="display: none;">
-        <a class="various" href="#popupbox1">click me</a>
-        <a class="various" href="#popupbox2">click me</a>
-        <a class="various" href="#popupbox3">click me</a>
-    </div>
+
+
+    <script>
+    $.getJSON( "data/data.json", function( json ) {
+
+        playerdata = JSON.parse(localStorage.getItem('playerData'));
+
+        if (typeof playerdata == 'undefined'){
+            playerdata = json.Players;
+        }
+
+        var i;
+        for (i=0; i<playerdata.length; i++){
+            $('#invisilinks').append('<a class="various" href="#popup'+playerdata[i].id+'">click me</a>');
+            $('#invisiboxes').append('<div id="popup'+playerdata[i].id+'" style="width: 500px; display: none;">'+
+                                     '   <h2>'+
+                                     '       Lorem ipsum dolor sit amet'+
+                                     '  </h2>'+
+                                     '   Donkey Dick '+playerdata[i].name+'!!!'+
+                                     '</div>');
+            $('#'+playerdata[i].column).append('<div class="event" id="'+playerdata[i].id+'" draggable="true">'+playerdata[i].name+'</div>');
+        }
+    });
+    </script>
 </body>

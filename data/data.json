@@ -1,0 +1,25 @@
+{
+  "Players": [{
+        "id": "Sean",
+        "name": "Sean",
+        "column": "col1",
+        "writeup": "LOREM IPSUM",
+        "Image": "4102.png",
+        "Stats": {
+          "Sexy": "Yes",
+          "Awesome": "Yes",
+          "The_Best": "Yes"
+        }
+    },{
+    "id":"Tristan",
+    "name": "Tristan",
+        "column": "col3",
+      "writeup": "LOREM IPSUM",
+      "Image": "4102.png",
+      "Stats": {
+        "Sexy": "Yes",
+        "Awesome": "Yes",
+        "The_Best": "yes"
+      }
+    }]
+}
