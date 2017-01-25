@@ -7,18 +7,90 @@
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
 
 <style>
+    @font-face {
+    font-family: 'Star Jedi Outline';
+    src: url('fonts/StarJediOutline.eot');
+    src: url('fonts/StarJediOutline.eot?#iefix') format('embedded-opentype'),
+        url('fonts/StarJediOutline.woff') format('woff'),
+        url('fonts/StarJediOutline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    body {
+        background-color:#ffffff;
+        background-image:url('images/lightspeed.gif');
+        background-repeat:no-repeat;
+        background-size: 100% 1000px;
+        size: 100% 100%
+    }
+    table{
+        margin: 0px auto;
+    }
     table th, table td {
-        width: 200px;
+        width: 300px;
         height:70px;
         padding: 5px;
+        font: normal normal bold 20px/1 "Times New Roman", Times, serif;
+        color:rgb(255,215,0);
     }
-    table span {
-        display:block;
-        background-color: #ccc;
-        border: 1px solid black;
-        color: fff;
-        height: 30px;
-        width: 100%;
+    .jdTitle{
+        color:rgb(255,215,0);
+        font-family: 'Star Jedi Outline', sans-serif;
+        font-size: 100px;
+        margin: 0px auto;
+        text-align: center;
+       margin:30px;
+    }
+    .smallImage{
+        height:50px;
+        width:50px;
+        margin-right:15px;
+    }
+    .bigImage{
+        height:350px;
+        width:350px;
+        margin-right:15px;
+    }
+    .playercard {
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          margin: 6px;
+          padding: 5px;
+          overflow: hidden;
+          border: none;
+          font: normal normal bold 20px/1 "Times New Roman", Times, serif;
+          color: rgba(0,0,0,1);
+          text-align: left;
+          vertical-align: middle;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          background: -webkit-linear-gradient(0deg, rgba(220,220,220,1) 0, rgba(220,220,220,1) 19%, rgba(255,255,255,1) 100%);
+          background: -moz-linear-gradient(90deg, rgba(220,220,220,1) 0, rgba(220,220,220,1) 19%, rgba(255,255,255,1) 100%);
+          background: linear-gradient(90deg, rgba(220,220,220,1) 0, rgba(220,220,220,1) 19%, rgba(255,255,255,1) 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+          -webkit-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.3) ;
+          box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.3) ;
+    }
+    .bangingpopup{
+          display: none;
+    }
+    .namespan{writeupspan
+        vertical-align:middle;
+        padding-bottom:45px;
+    }
+    .writeupspan{
+        vertical-align:middle;
+        font: normal normal bold 20px/1 "Times New Roman", Times, serif;
+        color: rgba(0,0,0,1);
+        padding-top:10px;
     }
 </style>
 <script>
@@ -29,17 +101,17 @@
 
     $(document).ready(function () {
         $(".various").fancybox({
-            maxWidth    : 800,
-            maxHeight   : 600,
+            maxWidth    : 1200,
+            maxHeight   : 800,
             fitToView   : false,
-            width       : '70%',
-            height      : '70%',
+            width       : '90%',
+            height      : '90%',
             autoSize    : false,
             closeClick  : false,
             openEffect  : 'none',
             closeEffect : 'none'
         });
-        $('.event').on("dragstart", function (event) {
+        $('.playercard').on("dragstart", function (event) {
             var dt = event.originalEvent.dataTransfer;
             dt.setData('Text', $(this).attr('id'));
         });
@@ -72,9 +144,10 @@
 </script>
 </head>
 <body>
+    <div class="jdTitle">Jasper Dangles</div>
     <table id="#draftTable" border="1">
         <tr>
-            <th>Picks</th>
+            <th>Draftees</th>
             <th>Team 1</th>
             <th>Team 2</th>
             <th>Team 3</th>
@@ -100,20 +173,21 @@
 
         playerdata = JSON.parse(localStorage.getItem('playerData'));
 
-        if (typeof playerdata == 'undefined'){
+        if (playerdata === null){
             playerdata = json.Players;
         }
 
         var i;
         for (i=0; i<playerdata.length; i++){
             $('#invisilinks').append('<a class="various" href="#popup'+playerdata[i].id+'">click me</a>');
-            $('#invisiboxes').append('<div id="popup'+playerdata[i].id+'" style="width: 500px; display: none;">'+
-                                     '   <h2>'+
-                                     '       Lorem ipsum dolor sit amet'+
-                                     '  </h2>'+
-                                     '   Donkey Dick '+playerdata[i].name+'!!!'+
+            $('#invisiboxes').append('<div id="popup'+playerdata[i].id+'" class="bangingpopup">'+
+                                     '   <h1>'+
+                                           playerdata[i].name+
+                                     '  </h1>'+
+                                     '<img class="bigImage" src="'+playerdata[i].Image+'"</img></br></br>'+
+                                     '<span class="writeupspan">'+playerdata[i].writeup+'</span>'+
                                      '</div>');
-            $('#'+playerdata[i].column).append('<div class="event" id="'+playerdata[i].id+'" draggable="true">'+playerdata[i].name+'</div>');
+            $('#'+playerdata[i].column).append('<div class="playercard" id="'+playerdata[i].id+'" draggable="true"><img class="smallImage" src="'+playerdata[i].Image+'"</img><span class="namespan">'+playerdata[i].name+'</span></div>');
         }
     });
     </script>

@@ -1,10 +1,10 @@
 {
   "Players": [{
         "id": "Sean",
-        "name": "Sean",
+        "name": "Sean Feehan",
         "column": "col1",
-        "writeup": "LOREM IPSUM",
-        "Image": "4102.png",
+        "Image": "images/4102.png",
+        "writeup": "Bacon ipsum dolor amet shoulder shank filet mignon pig meatloaf sausage ball tip pork short loin tongue jowl turducken porchetta. Ground round meatloaf spare ribs, bresaola cupim turkey venison. Swine shank turkey, beef short ribs strip steak bacon alcatra landjaeger leberkas capicola turducken. Rump filet mignon prosciutto fatback venison sausage cupim pig. Prosciutto andouille landjaeger, sirloin ham hock fatback filet mignon pork belly tail corned beef jowl pork chop boudin pig. Pastrami bacon jerky landjaeger, salami hamburger chuck pork chop porchetta ground round jowl.",
         "Stats": {
           "Sexy": "Yes",
           "Awesome": "Yes",
@@ -12,10 +12,10 @@
         }
     },{
     "id":"Tristan",
-    "name": "Tristan",
+    "name": "Tristan Feehan",
         "column": "col3",
-      "writeup": "LOREM IPSUM",
-      "Image": "4102.png",
+      "writeup": "Phasellizzle gangster volutpat mofo. Ut semper adipiscing shit. Donizzle non est. Nulla sapizzle mammasay mammasa mamma oo sa, dawg nec, accumsizzle doggy, dizzle quis, ass. Duis cool mofo. Etiam gangsta ornare ante. Mauris pot. Vestibulizzle yo pede gangster nibh check out this commodo. Lorem ipsizzle dolor sizzle amet, consectetuer boofron elit. Sed ac mah nizzle. Quisque mi sem, shizzle my nizzle crocodizzle izzle, rizzle a, eleifend a, rizzle.",
+      "Image": "images/4102.png",
       "Stats": {
         "Sexy": "Yes",
         "Awesome": "Yes",
