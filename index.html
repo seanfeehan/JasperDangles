@@ -183,9 +183,9 @@
 
         playerdata = JSON.parse(localStorage.getItem('playerData'));
 
-        //if (playerdata === null){
+        if (playerdata === null){
             playerdata = json.Players;
-        //}
+        }
 
         var i;
         for (i=0; i<playerdata.length; i++){
