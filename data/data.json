@@ -1,25 +1,157 @@
 {
   "Players": [{
-        "id": "Sean",
-        "name": "Sean Feehan",
-        "column": "col1",
-        "Image": "images/4102.png",
-        "writeup": "Bacon ipsum dolor amet shoulder shank filet mignon pig meatloaf sausage ball tip pork short loin tongue jowl turducken porchetta. Ground round meatloaf spare ribs, bresaola cupim turkey venison. Swine shank turkey, beef short ribs strip steak bacon alcatra landjaeger leberkas capicola turducken. Rump filet mignon prosciutto fatback venison sausage cupim pig. Prosciutto andouille landjaeger, sirloin ham hock fatback filet mignon pork belly tail corned beef jowl pork chop boudin pig. Pastrami bacon jerky landjaeger, salami hamburger chuck pork chop porchetta ground round jowl.",
-        "Stats": {
-          "Sexy": "Yes",
-          "Awesome": "Yes",
-          "The_Best": "Yes"
-        }
-    },{
-    "id":"Tristan",
-    "name": "Tristan Feehan",
-        "column": "col3",
-      "writeup": "Phasellizzle gangster volutpat mofo. Ut semper adipiscing shit. Donizzle non est. Nulla sapizzle mammasay mammasa mamma oo sa, dawg nec, accumsizzle doggy, dizzle quis, ass. Duis cool mofo. Etiam gangsta ornare ante. Mauris pot. Vestibulizzle yo pede gangster nibh check out this commodo. Lorem ipsizzle dolor sizzle amet, consectetuer boofron elit. Sed ac mah nizzle. Quisque mi sem, shizzle my nizzle crocodizzle izzle, rizzle a, eleifend a, rizzle.",
-      "Image": "images/4102.png",
-      "Stats": {
-        "Sexy": "Yes",
-        "Awesome": "Yes",
-        "The_Best": "yes"
-      }
-    }]
+    "id": "graham",
+    "name": "Graham Slavik",
+    "column": "col1",
+    "Image": "images/graham.jpg",
+    "writeup": "He was kidnapped at a young age by a desperate,  out of work,  Emilio Estevez trying to live out a real life mighty ducks story. It was years later he discovered it was in fact not Emilio Estevez,  but an escaped mental patient who forced him to play hockey.  There is no amount of therapy in the world that can ease his mental trauma, but he's a damn good coach!",
+    "song": "https://www.youtube.com/embed/7-NOZU2iPA8"
+  }, {
+    "id": "peter",
+    "name": "Peter Mitchell",
+    "column": "col1",
+    "Image": "images/peter.jpeg",
+    "writeup": "This player won a Nobel Prize for astoundingly being able to play hockey despite the fact that he has the same amount of brain cells as he does teeth. From the Golden Golden Gooses.",
+    "song": "https://www.youtube.com/embed/sZuH17o42O0"
+  }, {
+    "id": "sean",
+    "name": "Sean Feehan",
+    "column": "col1",
+    "Image": "images/sean.gif",
+    "writeup": "This player once spent the night in an Australian jail for molesting a wallaby. Subsequently he is now considered a god to 3 tribes on papua new guinea. He played his short career with the Lodgepole Super Smokers.",
+    "song": "https://www.youtube.com/embed/9bZkp7q19f0?start=4"
+  }, {
+    "id": "carey",
+    "name": "Carey Feehan",
+    "column": "col1",
+    "Image": "images/carey.jpg",
+    "writeup": "From the Burlington Coat Factory, he became know as the least likely to score a goal due to the fact that he is a Flipper Baby.",
+    "song": "https://www.youtube.com/embed/w5_EIikdFr8?start=65"
+  }, {
+    "id": "clay",
+    "name": "Clay Brophy",
+    "column": "col1",
+    "Image": "images/clay.jpg",
+    "writeup": "Always know as the Fort Simpson Blumpkins most worstest player, he has his teams record for most alcohols drunked.",
+    "song": "https://www.youtube.com/embed/2F2i6EQsPZY"
+  }, {
+    "id": "quinn",
+    "name": "Quinn Brophy",
+    "column": "col1",
+    "Image": "images/quinn.jpg",
+    "writeup": "Wearing number 12 for the Village Idiots, he first put on his jersey and looked in the mirror and thought it said 21. Yet he still scored the highest in this years draft aptitude test.",
+    "song": "https://www.youtube.com/embed/BYw_zamFGf0"
+  }, {
+    "id": "craig",
+    "name": "Craig Nedved",
+    "column": "col1",
+    "Image": "images/craig.jpg",
+    "writeup": "A fifth string plug for the Moose Jaw Knucklers, he has the record for most penalty minutes in one minute, with nine.",
+    "song": "https://www.youtube.com/embed/Ae0_lRegZB0"
+  }, {
+    "id": "morgan",
+    "name": "Morgan Douziech",
+    "column": "col1",
+    "Image": "images/morgan.gif",
+    "writeup": "During his single season with the Timmons Twains, an all Shania Twain look alike team, he was removed from the team due to looking too much like Shania Twain.",
+    "song": "https://www.youtube.com/embed/P7gMkiOPSeA"
+  }, {
+    "id": "zach",
+    "name": "Zach Richler",
+    "column": "col1",
+    "Image": "images/zach.png",
+    "writeup": "Appropriately playing for the Bean Town Never Nudes, he was always, and still is a home dresser.  He feels more comfortable changing in front of his mom.",
+    "song": "https://www.youtube.com/embed/gnLRtQRqwCA"
+  }, {
+    "id": "mark",
+    "name": "Mark Rossi",
+    "column": "col1",
+    "Image": "images/mark.jpg",
+    "writeup": "From the Ross River Tickle Teats, he is known for his sharp wit, clever charm, unprecedented good looks and uncanny ability to bribe writeup authors.",
+    "song": "https://www.youtube.com/embed/GibiNy4d4gc"
+  }, {
+    "id": "micheal",
+    "name": "Michael Aytenfisu",
+    "column": "col1",
+    "Image": "images/mike.png",
+    "writeup": "His coaching career started in the rain forests of South America. Leading a band of misfit chimpanzees to a championship. Well,  it was more him and his chimps brutally bludgeoning other tribes of chimps to death to steal their resources. In the end,  it had nothing to do with hockey,  and everything to do with violence.",
+    "song": "https://www.youtube.com/embed/b0AGiq9j_Ak"
+  }, {
+    "id": "john",
+    "name": "John Bridges",
+    "column": "col1",
+    "Image": "images/johnny.jpg",
+    "writeup": "He grew up a simple farm hand in small town Wisconsin. His one and only job was arousing horses for artificial insemination. One day a horse kicked him,  leaving him blind and costing him his spleen. For unexplainable reasons the accident left him a brilliant hockey mind. He coached several years for Michigan State nicknamed the Knob Rustler",
+    "song": "https://www.youtube.com/embed/lOOnfzVPhV4"
+  }, {
+    "id": "dennis",
+    "name": "Dennis Bridges",
+    "column": "col1",
+    "Image": "images/dennis.jpg",
+    "writeup": "While playing for the Milk River Funbags this player has a medal for best work/life balance for taking a break from masturbating incessantly, to masturbate incessantly.",
+    "song": "https://www.youtube.com/embed/xZKuzwPOefs"
+  }, {
+    "id": "bartek",
+    "name": "Bartek Kienc",
+    "column": "col1",
+    "Image": "images/bartek.jpg",
+    "writeup": "He was discovered 100 years ago by explorers on an expedition to the artic.  Frozen in a giant block of ice he was transported to the store room JC penny in a freezer. There he stayed until there was a power outage and he thawed. He spent his evenings playing with easy bake ovens and hockey equipment.  It was there he honed his skills and entered hockey. He is often mistaken for the ShamWow guy.",
+    "song": "https://www.youtube.com/embed/hRqAOyXL15Q"
+  }, {
+    "id": "riley",
+    "name": "Riley Phillips",
+    "column": "col1",
+    "Image": "images/riley.jpg",
+    "writeup": "Playing his whole career with the Turkey Town Peggers, he is known for being the only player to take off his helmet to headbutt the opposition. Since then he's learned to speak braille.",
+    "song": "https://www.youtube.com/embed/ydXsm0P5dtg?start=103"
+  }, {
+    "id": "chad",
+    "name": "Chad Rechlo",
+    "column": "col1",
+    "Image": "images/chad.jpg",
+    "writeup": "Playing for the Sudbury Shorn Scrotes, he long reigned as team champion at Mario Kart, only cause he always got the gad damn blue shells.",
+    "song": "https://www.youtube.com/embed/AAcnFOcu57s"
+  }, {
+    "id": "dylan",
+    "name": "Dylan Brown",
+    "column": "col1",
+    "Image": "images/dylan.jpg",
+    "writeup": "He owns the Medicine Hat Turd Burglars record for most Turds Burgled, which is impressive.",
+    "song": "https://www.youtube.com/embed/TeXatquVqAc"
+  }, {
+    "id": "ryan",
+    "name": "Ryan Brown",
+    "column": "col1",
+    "Image": "images/ryan.jpg",
+    "writeup": "During his career with the Sicamous Queef Wranglers he was the inspiration for the character Simple Jack. He only just found out that a tea bag is also noun.",
+    "song": "https://www.youtube.com/embed/uQZBew-tmyQ?start=40"
+  }, {
+    "id": "matt",
+    "name": "Matt Brown",
+    "column": "col1",
+    "Image": "images/matt.png",
+    "writeup": "There is nothing of note from this players career with the Ottawa Ox Chuckers, literally nothing.  It's like he never existed until now.",
+    "song": "https://www.youtube.com/embed/gTXGL0xPyLA"
+  }, {
+    "id": "brian",
+    "name": "Brian Dicks",
+    "column": "col1",
+    "Image": "images/dicks.jpg",
+    "writeup": "Making fake IDs allowed this player to play junior until the ripe old age of 36, he still only ever started in 3 games over 21 years totaling zero points for the Eagle Rock Cement Hands.",
+    "song": "https://www.youtube.com/embed/_zH9wHWMi_k"
+  }, {
+    "id": "glenn",
+    "name": "Glenn Patry",
+    "column": "col1",
+    "Image": "images/glenn.jpg",
+    "writeup": "The ninth alternate captain of the Elliot Lake Master Skaters, he just switched to hockey from baseball because he's been banned from all leagues for stealing 3rd base... from his mom.",
+    "song": "https://www.youtube.com/embed/nLsXJitaiVo"
+  }, {
+    "id": "jordan",
+    "name": "Jordan Richards",
+    "column": "col1",
+    "Image": "images/jordan.jpg",
+    "writeup": "Breaking the Harrington Knob Gobblers long standing record for most periods missed due to explosive sharts, earned him the nickname Sharty",
+    "song": "https://www.youtube.com/embed/68wB98evvVs"
+  }]
 }

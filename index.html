@@ -20,7 +20,6 @@
     body {
         background-color:#ffffff;
         background-image:url('images/lightspeed.gif');
-        background-repeat:no-repeat;
         background-size: 100% 1000px;
         size: 100% 100%
     }
@@ -45,11 +44,6 @@
     .smallImage{
         height:50px;
         width:50px;
-        margin-right:15px;
-    }
-    .bigImage{
-        height:350px;
-        width:350px;
         margin-right:15px;
     }
     .playercard {
@@ -82,15 +76,31 @@
     .bangingpopup{
           display: none;
     }
-    .namespan{writeupspan
+    .namespan{
         vertical-align:middle;
         padding-bottom:45px;
+    }
+    .bigImage{
+        height:350px;
+        width:350px;
+        margin-right:15px;
+    }
+    .leftcontent{
+        float: left;
+        width:30%;
+    }
+    .vidframe{
+        width: 65%;
+        height: 85%;
+        display: block;
+        float: right;
     }
     .writeupspan{
         vertical-align:middle;
         font: normal normal bold 20px/1 "Times New Roman", Times, serif;
         color: rgba(0,0,0,1);
         padding-top:10px;
+        display: inline;
     }
 </style>
 <script>
@@ -173,9 +183,9 @@
 
         playerdata = JSON.parse(localStorage.getItem('playerData'));
 
-        if (playerdata === null){
+        //if (playerdata === null){
             playerdata = json.Players;
-        }
+        //}
 
         var i;
         for (i=0; i<playerdata.length; i++){
@@ -184,9 +194,10 @@
                                      '   <h1>'+
                                            playerdata[i].name+
                                      '  </h1>'+
-                                     '<img class="bigImage" src="'+playerdata[i].Image+'"</img></br></br>'+
-                                     '<span class="writeupspan">'+playerdata[i].writeup+'</span>'+
-                                     '</div>');
+                                     ' <div class="leftcontent"><img class="bigImage" src="'+playerdata[i].Image+'"</img></br></br>'+
+                                     ' <span class="writeupspan">'+playerdata[i].writeup+'</span></div>'+
+                                     ' <iframe class="vidframe" id="youtube'+playerdata[i].id + '" src="' + playerdata[i].song+'"></iframe> ' +
+                                     ' </div>');
             $('#'+playerdata[i].column).append('<div class="playercard" id="'+playerdata[i].id+'" draggable="true"><img class="smallImage" src="'+playerdata[i].Image+'"</img><span class="namespan">'+playerdata[i].name+'</span></div>');
         }
     });
